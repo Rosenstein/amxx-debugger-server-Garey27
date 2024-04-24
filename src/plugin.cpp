@@ -62,7 +62,7 @@ void OnAmxxAttach()
   exec_hook.Install(MF_AmxExec,
                     amx_Exec_Profiler);
   MF_AmxExec = (PFN_AMX_EXEC)exec_hook.GetTrampoline();
-
+print_srvconsole("[AMXX Debugger] AMXX Attach!\n");
 }
 
 void OnAmxxDetach()

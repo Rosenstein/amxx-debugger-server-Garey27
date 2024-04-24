@@ -140,7 +140,7 @@ public:
   ~DebuggerClient()
   {
     stopDebugging();
-    printf("Im dying!\n");
+    print_srvconsole("[AMXX Debugger] Im dying!\n");
   }
   
   void setBreakpoint(std::string path, int line, int id)
@@ -973,6 +973,7 @@ void removeClientID(const TcpConnection::Ptr& session)
 
 void debugThread()
 {
+	print_srvconsole("[AMXX Debugger] Debug thread starting!\n");
   auto service = TcpService::Create();
   service->startWorkerThread(2);
 
