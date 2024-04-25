@@ -25,7 +25,17 @@ void print_srvconsole(const char *fmt, ...);
 using namespace brynet;
 using namespace brynet::net;
 using namespace brynet::net::http;
+void print_srvconsole(const char *fmt, ...)
+{
+	va_list argptr;
+	static char string[384];
+	va_start(argptr, fmt);
+	vsnprintf(string, sizeof(string) - 1, fmt, argptr);
+	string[sizeof(string) - 1] = '\0';
+	va_end(argptr);
 
+	SERVER_PRINT(string);
+}
 enum DebugState
 {
   DebugDead = -1,
