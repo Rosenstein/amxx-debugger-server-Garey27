@@ -18,7 +18,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "amxxmodule.h"
-
+void print_srvconsole(const char *fmt, ...);
 /************* METAMOD SUPPORT *************/
 #ifdef USE_METAMOD
 
