@@ -52,7 +52,7 @@
 // 3 - added new tagAMX structure (amxx1.5)
 // 4 - added new 'library' setting for direct loading
 #define AMXX_INTERFACE_VERSION 4
-
+void print_srvconsole(const char *fmt, ...);
 // amxx module info
 struct amxx_module_info_s
 {
