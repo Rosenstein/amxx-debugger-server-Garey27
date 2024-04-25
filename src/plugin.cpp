@@ -35,6 +35,7 @@
 #include <thread>
 #include <chrono>
 extern void *pAMXFunctions;
+void print_srvconsole(const char *fmt, ...);
 // amx_Exec() hook. This hook is used to intercept calls to public functions.
 subhook::Hook exec_hook;
 

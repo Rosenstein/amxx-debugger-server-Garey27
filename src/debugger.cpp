@@ -21,7 +21,7 @@
 #include <brynet/net/wrapper/ConnectionBuilder.hpp>
 #include "utlbuffer.h"
 #include <fstream>
-
+void print_srvconsole(const char *fmt, ...);
 using namespace brynet;
 using namespace brynet::net;
 using namespace brynet::net::http;
